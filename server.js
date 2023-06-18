@@ -43,7 +43,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: {
+        directives: {
+            "media-src": ["'self'", "https://nanoscalesimulations.com/"],
+        }
+    }
+}));
 app.use(xss());
 app.use(mongoSanitize());
 
