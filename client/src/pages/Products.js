@@ -26,7 +26,7 @@ function Products() {
                                     NanoScale</span><br/>
                                     Your integrated platform for molecular
                                 </h1>
-                                <p class="text-muted lead">Med vores gennemførende VR teknologi, vil alt indlæring være muligt!</p>
+                                <p className="text-muted lead">Med vores gennemførende VR teknologi, vil alt indlæring være muligt!</p>
                                 <hr></hr>
                                 <div className='hero-btn-group mt-4 g-4'>
                                     <SimpleBottomNavigation/>
