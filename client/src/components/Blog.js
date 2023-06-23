@@ -170,24 +170,32 @@ const Blog = ({
                                             <Grid item xs={12} sm container>
                                                 <Grid item xs container direction="column" spacing={2}>
                                                     <Grid item xs>
-                                                        <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                                                            {author.charAt(0)}
-                                                        </Avatar>
-                                                        <hr></hr>
-                                                        <Typography gutterBottom variant="subtitle1" component="div">
-                                                            <h2>{title}</h2>
-                                                        </Typography>
+                                                        <CardHeader
+                                                            avatar={
+                                                                <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+                                                                    {author.charAt(0)}
+                                                                </Avatar>
+                                                            }
+                                                            title={
+                                                                <Typography sx={{ color: '#3C9FE1' }}>
+                                                                    <div className='blog-card-titel'>
+                                                                        <h5>{title}</h5>
+                                                                    </div>
+                                                                </Typography>
+                                                            }
+                                                        />
                                                         <Typography variant="body2" gutterBottom>
-                                                            <h4>{subtitle}</h4>
+                                                            <h4 className='px-4'>{subtitle}</h4>
                                                         </Typography>
+                                                        <hr></hr>
                                                         <Typography variant="body2" color="text.secondary">
-                                                            {fulltext}
+                                                            <p className='px-4'>{fulltext}</p>
                                                         </Typography>
                                                     </Grid>
                                                     <Grid item>
                                                         <Typography sx={{ cursor: 'pointer' }} variant="body2">
-                                                            <p>{author}</p>
-                                                            <p>{date}</p>
+                                                            <p className='px-4'>{author}</p>
+                                                            <p className='px-4'>{date}</p>
                                                         </Typography>
                                                     </Grid>
                                                 </Grid>
